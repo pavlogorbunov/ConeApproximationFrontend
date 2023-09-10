@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+.menu-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    background-color: rgb(176, 176, 176);
+    border-radius: 5px;
+    z-index: 2;
+    padding: 10px;
+    box-shadow: 0 0 50px #707070;
+}
+
+.menu:hover::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    font-size: 14px;
+    content: "Cone parameters: R - base radius, H - height, N - approximation number. ( R > 0 ), ( H > 0 ), ( 3 <= N < 300)";
+    text-align: center;
+}
+
+.menu__form {
+    display: flex;
+}
+
+.menu__label {
+    margin-right: 3px;
+}
+
+.menu__input {
+    max-width: 30px;
+    background-color: rgb(180, 180, 180);
+    border: 2px solid #5b5b5b;
+    border-radius: 5px;
+}
+
+.menu__input_incorrect {
+    border: 2px solid red;
+}
+
+.menu__input:not(:last-of-type) {
+    margin-right: 10px;
+}
